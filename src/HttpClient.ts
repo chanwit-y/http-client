@@ -5,13 +5,13 @@ export class HttpClient {
   public constructor() {
     this._api = axios.create();
     this._api.interceptors.request.use(async (config: AxiosRequestConfig) => {
-    //   const jwtToken = await getAccessToken();
-    //   config.headers = {
-    //     "content-Type": "application/json",
-    //     "app-version": "1.1.0",
-    //     Authorization: "Bearer " + jwtToken,
-    //     "Access-Control-Allow-Origin": true,
-    //   };
+      //   const jwtToken = await getAccessToken();
+      //   config.headers = {
+      //     "content-Type": "application/json",
+      //     "app-version": "1.1.0",
+      //     Authorization: "Bearer " + jwtToken,
+      //     "Access-Control-Allow-Origin": true,
+      //   };
       config.timeout = 30 * 1000;
 
       return config;
